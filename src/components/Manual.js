@@ -9,11 +9,11 @@ function Manual({ numbers, setNumbers, draw }) {
     e.preventDefault();
 
     if (
-      //seperte this logic out into a function that returns true/false?
+      //spereate this logic out into a function that returns true/false?
       numbers.length < 6 &&
       number < 60 &&
       number > -1 &&
-      !numbers.includes(number)
+      !numbers.includes(parseInt(number, 10)) 
     ) {
       setNumbers((numbers) => {
         let arr = [...numbers];
